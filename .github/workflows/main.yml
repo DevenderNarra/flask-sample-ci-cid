@@ -32,13 +32,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Debug DockerHub secrets (TEMP)
-        run: |
-          echo "DockerHub Username: ${{ secrets.DOCKERHUB_USERNAME }}"
-          echo "DockerHub Token Length: ${#DOCKERHUB_TOKEN}"
-        env:
-          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
